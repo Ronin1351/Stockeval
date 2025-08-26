@@ -10,8 +10,8 @@
       --card:#111827;
       --muted:#94a3b8;
       --text:#e5e7eb;
-      --accent:#f4b400;   /* gold */
-      --primary:#06b6d4;  /* cyan */
+      --accent:#f4b400;
+      --primary:#06b6d4;
       --ok:#22c55e;
       --warn:#f59e0b;
       --bad:#ef4444;
@@ -31,103 +31,42 @@
       padding:28px 20px 10px;
       max-width:1100px; margin:0 auto;
     }
-    h1{
-      margin:0 0 6px; font-size:26px; letter-spacing:.3px;
-      display:flex; align-items:center; gap:10px;
-    }
-    .badge{
-      font-size:12px; padding:4px 10px; border-radius:999px;
-      background:linear-gradient(90deg,var(--primary),#22d3ee);
-      color:#001015; font-weight:700;
-    }
+    h1{ margin:0 0 6px; font-size:26px; letter-spacing:.3px; display:flex; align-items:center; gap:10px }
+    .badge{ font-size:12px; padding:4px 10px; border-radius:999px; background:linear-gradient(90deg,var(--primary),#22d3ee); color:#001015; font-weight:700 }
     .sub{color:var(--muted); font-size:13px}
     main{max-width:1100px; margin:10px auto 50px; padding:0 20px;}
     .grid{display:grid; gap:16px}
     @media(min-width:900px){ .grid{ grid-template-columns: 1.3fr 1fr; } }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--card);
-      border:1px solid var(--border);
-      border-radius:18px; padding:18px 18px 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
+    .card{ background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--card); border:1px solid var(--border); border-radius:18px; padding:18px 18px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35) }
     .card h2{margin:0 0 14px; font-size:18px; display:flex; align-items:center; gap:10px}
-    .hint{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:18px; height:18px; border-radius:50%;
-      background:var(--chip); color:var(--muted); font-size:12px; font-weight:800;
-      position:relative; cursor:default;
-    }
-    .hint:hover::after{
-      content:attr(data-tip);
-      position:absolute; left:0; top:130%;
-      min-width:260px; max-width:420px;
-      background:#0b1322; color:#dbe5ff; border:1px solid #25324a;
-      padding:10px 12px; border-radius:10px; z-index:5;
-      box-shadow:0 10px 35px rgba(0,0,0,.45);
-      white-space:pre-wrap; line-height:1.35;
-    }
-    .section{
-      display:grid; gap:10px; grid-template-columns: 1fr 1fr;
-    }
-    .section .full{ grid-column: 1 / -1; }
-    label{ font-size:12px; color:var(--muted); display:block; margin:2px 0 6px; }
-    input[type="number"]{
-      width:100%; padding:12px 12px;
-      background:var(--input);
-      color:var(--text);
-      border:1px solid #263042;
-      border-radius:12px;
-      outline:none;
-    }
-    input[type="number"]::placeholder{ color:#60708f; }
-    .out{
-      display:flex; justify-content:space-between; align-items:center;
-      padding:12px 14px; border-radius:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)), #0e1727;
-      border:1px solid #23314a;
-      margin-top:4px;
-    }
+    .hint{ display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%; background:var(--chip); color:var(--muted); font-size:12px; font-weight:800; position:relative; cursor:default }
+    .hint:hover::after{ content:attr(data-tip); position:absolute; left:0; top:130%; min-width:260px; max-width:420px; background:#0b1322; color:#dbe5ff; border:1px solid #25324a; padding:10px 12px; border-radius:10px; z-index:5; box-shadow:0 10px 35px rgba(0,0,0,.45); white-space:pre-wrap; line-height:1.35 }
+    .section{ display:grid; gap:10px; grid-template-columns: 1fr 1fr }
+    .section .full{ grid-column: 1 / -1 }
+    label{ font-size:12px; color:var(--muted); display:block; margin:2px 0 6px }
+    input[type="number"]{ width:100%; padding:12px 12px; background:var(--input); color:var(--text); border:1px solid #263042; border-radius:12px; outline:none }
+    input[type="number"]::placeholder{ color:#60708f }
+    .out{ display:flex; justify-content:space-between; align-items:center; padding:12px 14px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)), #0e1727; border:1px solid #23314a; margin-top:4px }
     .out .label {color:#bcd0ff; font-size:12px; letter-spacing:.4px}
-    .out .value{ font-size:22px; font-weight:800;}
+    .out .value{ font-size:22px; font-weight:800 }
     .accent{ background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.08)), #2c1e00; border-color:#5b4604 }
-    .accent .label{ color:#ffd65a }
-    .accent .value{ color:#ffd65a }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px; background:#0b1322; border:1px solid #25324a;
-      font-size:12px; color:#dbeafe; font-weight:700;
-    }
+    .accent .label{ color:#ffd65a } .accent .value{ color:#ffd65a }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:#0b1322; border:1px solid #25324a; font-size:12px; color:#dbeafe; font-weight:700 }
     .pill.ok{ border-color:#1d3b2a; background:#0a1610; color:#b4f5c3 }
     .pill.warn{ border-color:#4d3d17; background:#161207; color:#ffe4a3 }
     .pill.bad{ border-color:#502525; background:#160a0a; color:#ffb4b4 }
-    .toolbar{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;
-    }
-    button{
-      background:linear-gradient(90deg,var(--primary),#1ad1e6);
-      color:#012128; border:none; padding:10px 14px; border-radius:12px;
-      font-weight:800; cursor:pointer;
-      box-shadow:0 10px 25px rgba(0,0,0,.3);
-    }
-    button.ghost{
-      background:#0b1322; color:#cfe9ff; border:1px solid #23314a;
-    }
-    .table{
-      width:100%; border-collapse:separate; border-spacing:0 6px; margin-top:6px;
-      font-size:13px; color:#cbd5e1;
-    }
-    .table th{ text-align:left; color:#9fb2d8; font-weight:700; }
-    .table td,.table th{ padding:6px 10px; }
-    .table tr{ background:#0e1727; }
+    .toolbar{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px }
+    button{ background:linear-gradient(90deg,var(--primary),#1ad1e6); color:#012128; border:none; padding:10px 14px; border-radius:12px; font-weight:800; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,.3) }
+    button.ghost{ background:#0b1322; color:#cfe9ff; border:1px solid #23314a }
+    .table{ width:100%; border-collapse:separate; border-spacing:0 6px; margin-top:6px; font-size:13px; color:#cbd5e1 }
+    .table th{ text-align:left; color:#9fb2d8; font-weight:700 }
+    .table td,.table th{ padding:6px 10px }
+    .table tr{ background:#0e1727 }
     .table tr td:first-child, .table tr th:first-child{ border-radius:10px 0 0 10px }
     .table tr td:last-child, .table tr th:last-child{ border-radius:0 10px 10px 0 }
     .kpi{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 0 }
-    .kpi .chip{
-      background:#0b1322; border:1px solid #223149; border-radius:12px;
-      padding:10px 12px; font-size:13px; color:#dbeafe; min-width: 160px;
-    }
+    .kpi .chip{ background:#0b1322; border:1px solid #223149; border-radius:12px; padding:10px 12px; font-size:13px; color:#dbeafe; min-width: 160px }
     footer{ max-width:1100px; margin: 10px auto 40px; padding:0 20px; color:#93a3bf; font-size:12px }
-    code.formula{ color:#eaffcf }
   </style>
 </head>
 <body>
@@ -208,7 +147,7 @@ r’s are annual revenue growth rates as decimals (we convert your % input)."></
 
     <section class="card">
       <h2>Net‑Debt / EBITDA
-        <span class="hint" data-tip="Net Debt = Short‑term Debt + Long‑term Debt + Current Portion of Long‑term Debt + Term Debt − Cash & Equivalents
+        <span class="hint" data-tip="Net Debt = Short‑term Debt + Long‑term Debt − Cash & Equivalents
 Ratio = Net Debt / EBITDA"></span>
       </h2>
       <div class="section">
@@ -219,14 +158,6 @@ Ratio = Net Debt / EBITDA"></span>
         <div>
           <label for="ltd">Long Term Debt</label>
           <input id="ltd" type="number" step="0.01" placeholder="e.g., 2561" />
-        </div>
-        <div>
-          <label for="cpltd">Current Portion Long</label>
-          <input id="cpltd" type="number" step="0.01" placeholder="optional, e.g., 307" />
-        </div>
-        <div>
-          <label for="termdebt">Term Debt</label>
-          <input id="termdebt" type="number" step="0.01" placeholder="optional, e.g., 0" />
         </div>
         <div>
           <label for="cash">Cash & Equivalents</label>
@@ -245,8 +176,8 @@ Ratio = Net Debt / EBITDA"></span>
 
     <section class="card">
       <h2>ROIC
-        <span class="hint" data-tip="NOPAT = EBIT × (1 − (Tax / EBIT))  (equivalently EBIT − Tax)
-Invested Capital = Long‑Term Debt + Current Portion of Long‑Term Debt + Term Debt + Common Stock + Capital Surplus + Retained Earnings − Cash & Equivalents
+        <span class="hint" data-tip="NOPAT = EBIT − Tax
+Invested Capital = Long‑Term Debt + Current Portion of Long‑Term Debt + Common Stock + Capital Surplus + Retained Earnings − Cash & Equivalents
 ROIC = (NOPAT / Invested Capital) × 100"></span>
       </h2>
       <div class="section">
@@ -257,10 +188,6 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
         <div>
           <label for="cpl">Current Portion Long</label>
           <input id="cpl" type="number" step="0.01" placeholder="e.g., 307" />
-        </div>
-        <div>
-          <label for="term">Term Debt</label>
-          <input id="term" type="number" step="0.01" placeholder="e.g., 0" />
         </div>
         <div>
           <label for="cs">Common Stock</label>
@@ -305,21 +232,21 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
       </div>
       <div style="margin-top:14px" class="out accent">
         <span class="label">Notes</span>
-        <span class="value" id="notes">Enter a WACC to see value creation or destruction.</span>
+        <span class="value" id="notes">Using ROIC-only when WACC is empty.</span>
       </div>
     </section>
   </main>
 
   <footer>
-    Formula checks: cumulative growth, EBIT margin, net‑debt/EBITDA (includes optional current portion and term debt), and ROIC (NOPAT / Invested Capital) follow the definitions shown in the tooltips. Parentheses are explicit to avoid ambiguity.
+    Adjustments per request: removed Term Debt from Net‑Debt/EBITDA, moved Current Portion Long to ROIC only, and added ROIC-only quality when WACC is not provided.
   </footer>
 
   <script>
     const els = {
       r1: q('#r1'), r2: q('#r2'), r3: q('#r3'), r4: q('#r4'),
       ebit: q('#ebit'), sales: q('#sales'),
-      std: q('#std'), ltd: q('#ltd'), cpltd: q('#cpltd'), termdebt: q('#termdebt'), cash: q('#cash'), ebitda: q('#ebitda'),
-      tax: q('#tax'), cpl: q('#cpl'), term: q('#term'), cs: q('#cs'), cap: q('#cap'), re: q('#re'), roicCash: q('#roicCash'),
+      std: q('#std'), ltd: q('#ltd'), cash: q('#cash'), ebitda: q('#ebitda'),
+      tax: q('#tax'), cpl: q('#cpl'), cs: q('#cs'), cap: q('#cap'), re: q('#re'), roicCash: q('#roicCash'),
       cumOut: q('#cumOut'), growthClass: q('#growthClass'),
       ebitMarginOut: q('#ebitMarginOut'), ndebtOut: q('#ndebtOut'), roicOut: q('#roicOut'),
       cgKpi: q('#cgKpi'), cgClassKpi: q('#cgClassKpi'), emKpi: q('#emKpi'), ndKpi: q('#ndKpi'), roicKpi: q('#roicKpi'),
@@ -342,6 +269,13 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
       return (p > 120) ? 'Outlier' : '—';
     }
 
+    function roicQuality(roic){
+      if (roic >= 20) return {text:'ROIC-only: Excellent', cls:'ok'};
+      if (roic >= 10) return {text:'ROIC-only: Good', cls:'warn'};
+      if (roic >= 5)  return {text:'ROIC-only: Weak', cls:'warn'};
+      return {text:'ROIC-only: Poor', cls:'bad'};
+    }
+
     function update(){
       // Cumulative Growth
       const r1 = num(els.r1.value)/100, r2 = num(els.r2.value)/100, r3 = num(els.r3.value)/100, r4 = num(els.r4.value)/100;
@@ -355,17 +289,17 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
       const ebitMargin = Sales !== 0 ? (EBIT / Sales) * 100 : 0;
       els.ebitMarginOut.textContent = pct(ebitMargin);
 
-      // Net-debt / EBITDA
-      const std = num(els.std.value), ltd = num(els.ltd.value), cpltd = num(els.cpltd.value), termd = num(els.termdebt.value);
+      // Net-debt / EBITDA (no term debt; no current portion here)
+      const std = num(els.std.value), ltd = num(els.ltd.value);
       const cash = num(els.cash.value), ebitda = num(els.ebitda.value);
-      const netDebt = std + ltd + cpltd + termd - cash;
+      const netDebt = std + ltd - cash;
       const ndRatio = ebitda !== 0 ? netDebt / ebitda : 0;
       els.ndebtOut.textContent = fix(ndRatio, 2);
 
       // ROIC
-      const tax = num(els.tax.value), cpl = num(els.cpl.value), term = num(els.term.value), cs = num(els.cs.value), cap = num(els.cap.value), re = num(els.re.value), rcash = num(els.roicCash.value);
-      const NOPAT = EBIT - tax; // equivalent to EBIT*(1 - tax/EBIT)
-      const invested = ltd + cpl + term + cs + cap + re - rcash;
+      const tax = num(els.tax.value), cpl = num(els.cpl.value), cs = num(els.cs.value), cap = num(els.cap.value), re = num(els.re.value), rcash = num(els.roicCash.value);
+      const NOPAT = EBIT - tax; // EBIT × (1 − tax/EBIT) == EBIT − Tax
+      const invested = ltd + cpl + cs + cap + re - rcash;
       const roic = invested !== 0 ? (NOPAT / invested) * 100 : 0;
       els.roicOut.textContent = pct(roic);
 
@@ -376,9 +310,10 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
       els.ndKpi.textContent = fix(ndRatio, 2);
       els.roicKpi.textContent = pct(roic);
 
-      // WACC comparison
-      const wacc = num(els.wacc.value);
-      if (els.wacc.value.trim().length){
+      // WACC comparison or ROIC-only quality
+      const waccStr = els.wacc.value.trim();
+      if (waccStr.length){
+        const wacc = num(waccStr);
         const spread = roic - wacc;
         els.spread.textContent = spread.toFixed(2) + '%';
         if (spread > 0.5){
@@ -396,9 +331,10 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
         }
       }else{
         els.spread.textContent = '—';
-        els.valueFlag.textContent = '—';
-        els.valueFlag.className = 'chip';
-        els.notes.textContent = 'Enter a WACC to see value creation or destruction.';
+        const qlt = roicQuality(roic);
+        els.valueFlag.textContent = qlt.text;
+        els.valueFlag.className = 'chip ' + qlt.cls;
+        els.notes.textContent = 'Using ROIC-only when WACC is empty.';
       }
     }
 
@@ -406,8 +342,8 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
     function loadSample(){
       els.r1.value = -11.26; els.r2.value = -8.76; els.r3.value = 16.72; els.r4.value = -5.5;
       els.ebit.value = 1254; els.sales.value = 8264;
-      els.std.value = 0; els.ltd.value = 2561; els.cpltd.value = 0; els.termdebt.value = 0; els.cash.value = 471; els.ebitda.value = 1571;
-      els.tax.value = 152; els.cpl.value = 307; els.term.value = 0; els.cs.value = 181; els.cap.value = 2189; els.re.value = 9635; els.roicCash.value = 471;
+      els.std.value = 0; els.ltd.value = 2561; els.cash.value = 471; els.ebitda.value = 1571;
+      els.tax.value = 152; els.cpl.value = 307; els.cs.value = 181; els.cap.value = 2189; els.re.value = 9635; els.roicCash.value = 471;
       els.wacc.value = '';
       update();
     }
@@ -419,12 +355,9 @@ ROIC = (NOPAT / Invested Capital) × 100"></span>
       update();
     }
 
-    // Wire up listeners
     document.querySelectorAll('input').forEach(i => i.addEventListener('input', update));
-    els.sampleBtn.addEventListener('click', loadSample);
-    els.clearBtn.addEventListener('click', clearAll);
-
-    // Initial
+    q('#sampleBtn').addEventListener('click', loadSample);
+    q('#clearBtn').addEventListener('click', clearAll);
     update();
   </script>
 </body>
